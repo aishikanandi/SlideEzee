@@ -1,0 +1,128 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(151, 211, 191, 0.783);
+
+}
+.button-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    position: relative;
+    border: solid 2px transparent;
+    gap: 6px;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, #1d2b64, #03a9f4) border-box;
+    border-radius: 10px;
+}
+
+.custom-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.custom-button:hover {
+    background: linear-gradient(90deg, #1d2b64 0%, #03a9f4 100%);
+    cursor: pointer;
+}
+
+.custom-button .button-text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    background: linear-gradient(90deg, #1d2b64 0%, #03a9f4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.custom-button .button-text-black {
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.custom-button:hover .button-text {
+    background: unset;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+}
+
+.custom-button:hover .button-text-black {
+    color: #fff;
+}
+
+.custom-button .button-icon {
+    color: #1d2b64;
+}
+
+.custom-button:hover .button-icon {
+    color: #fff;
+}
+
+
+
+.custom-button-fill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    border-radius: 10px;
+    gap: 6px;
+    background: linear-gradient(90deg, #1d2b64 0%, #03a9f4 100%);
+    border: 2px solid transparent;
+}
+
+.custom-button-fill:hover {
+    position: relative;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, #1d2b64, #03a9f4) border-box;
+    cursor: pointer;
+}
+
+.custom-button-fill:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #1d2b64 0%, #03a9f4 100%);
+}
+
+.custom-button-fill .button-fill-text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+}
+
+.custom-button-fill:hover .button-fill-text {
+    background: linear-gradient(90deg, #1d2b64 0%, #03a9f4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.custom-button-fill .button-fill-icon {
+    color: #fff;
+}
+
+.custom-button-fill:hover .button-fill-icon {
+    color: #1d2b64;
+}
+

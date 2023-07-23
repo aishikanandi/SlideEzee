@@ -1,0 +1,26 @@
+
+{
+  "manifest_version": 3,
+  "name": "SlideEzee",
+  "version": "1.0",
+  "description": "Screenshots put together to generate pdfs",
+  "permissions": [ "activeTab","storage",
+  "unlimitedStorage" ],
+  "host_permissions": [ "<all_urls>" ],
+  "icons": {
+    "16": "images/SlideEzee.png",
+    "48": "images/SlideEzee.png",
+    "128": "images/SlideEzee.png"
+  },"background": {
+    "service_worker": "dist/background.bundle.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}
